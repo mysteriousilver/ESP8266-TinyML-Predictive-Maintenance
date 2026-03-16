@@ -29,7 +29,7 @@ By utilizing a Fast Fourier Transform (FFT) and Root Mean Square (RMS) calculati
 
   4. Monitor: Open the Serial Monitor at 115200 baud. The system will continuously sample 1-second windows at 50 Hz and output the calculated mathematical anomaly score.
 
-# Operational State Thresholds
+#### Operational State Thresholds
 
 The firmware dynamically categorizes the motor into three states based on empirical Euclidean distance from the K-Means centroid:
 
