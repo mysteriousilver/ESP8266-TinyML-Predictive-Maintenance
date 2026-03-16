@@ -19,7 +19,7 @@ By utilizing a Fast Fourier Transform (FFT) and Root Mean Square (RMS) calculati
 * **Alerts:** Standard GPIO LED
 
 
-🚀 How to Run the Inference
+## 🚀 How to Run the Inference
 
   1. Hardware Setup: Connect the MPU6050 to the ESP8266 (SDA to D2, SCL to D1). Connect an LED to pin D7 for hardware alerts.
 
@@ -29,22 +29,22 @@ By utilizing a Fast Fourier Transform (FFT) and Root Mean Square (RMS) calculati
 
   4. Monitor: Open the Serial Monitor at 115200 baud. The system will continuously sample 1-second windows at 50 Hz and output the calculated mathematical anomaly score.
 
-Operational State Thresholds
+# Operational State Thresholds
 
 The firmware dynamically categorizes the motor into three states based on empirical Euclidean distance from the K-Means centroid:
 
-  1. Nominal Operation: Score < 3.5
+  * Nominal Operation: Score < 3.5
 
-  2. Offline State: 3.5 < Score < 10.0
+  * Offline State: 3.5 < Score < 10.0
 
-  3. Critical Imbalance: Score > 10.0 (Triggers GPIO HIGH)
+  * Critical Imbalance: Score > 10.0 (Triggers GPIO HIGH)
 
 
-📊 Digital Signal Processing (DSP)
+## 📊 Digital Signal Processing (DSP)
 
 Running inference on raw time-series data instantly overflows the ESP8266 memory. Included in the /docs folder is a Python script (plot_fft.py) that visually demonstrates the DSP pipeline. It extracts the dominant 13 Hz rotational frequency peak, which serves as the primary feature for the K-Means algorithm.
 
 
-📄 License
+## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
